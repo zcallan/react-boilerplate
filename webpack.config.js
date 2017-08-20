@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const webpack = require( 'webpack' );
 const path = require( 'path' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
@@ -15,7 +16,7 @@ module.exports = {
   entry: path.resolve( __dirname, './src/Root.jsx' ),
   output: {
     path: path.resolve( __dirname, './build' ),
-    filename: 'bundle.[hash].min.js'
+    filename: 'bundle.[hash].min.js',
   },
   devtool: 'eval',
   resolve: {
@@ -41,12 +42,17 @@ module.exports = {
         test: /\.json$/,
         use: 'json-loader',
       },
-    ]
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.[hash].js',
+      minChunks: Infinity,
+    }),
     new ExtractTextPlugin( 'styles.[hash].css' ),
     new HtmlPlugin({ template: 'index.html' }),
-  ]
+  ],
 };

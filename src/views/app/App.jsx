@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import { Home } from 'views';
 
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
-        <h1>React Boilerplate</h1>
+      <div>
+        <Home />
       </div>
-    )
+    );
   }
 }
 
