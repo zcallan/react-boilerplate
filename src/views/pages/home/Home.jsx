@@ -7,8 +7,6 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <h1>React Boilerplate</h1>
-
         <p>Home</p>
 
         <Link to="/about">About</Link>

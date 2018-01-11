@@ -7,8 +7,6 @@ class About extends Component {
   render() {
     return (
       <div className="about">
-        <h1>React Boilerplate</h1>
-
         <p>About</p>
 
         <Link to="/">Home</Link>
