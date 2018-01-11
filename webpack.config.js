@@ -16,7 +16,8 @@ module.exports = {
   entry: path.resolve( __dirname, './src/Root.jsx' ),
   output: {
     path: path.resolve( __dirname, './build' ),
-    filename: 'bundle.[hash].min.js',
+    filename: '[name].[hash].min.js',
+    publicPath: '/',
   },
   devtool: 'eval',
   resolve: {
