@@ -1,15 +1,15 @@
-import './about.scss';
+import './notFound.scss';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-class About extends Component {
+class NotFound extends Component {
   render() {
     return (
-      <div className="about">
+      <div className="not-found">
         <h1>React Boilerplate</h1>
 
-        <p>About</p>
+        <p>404 - Page not found</p>
 
         <Link to="/">Home</Link>
       </div>
@@ -17,4 +17,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default NotFound;

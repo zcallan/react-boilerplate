@@ -37,7 +37,13 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.12",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.2.2"
   }
 }

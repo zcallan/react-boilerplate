@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from 'views';
+import { BrowserRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import { routes } from 'config';
 
+const root = (
+  <BrowserRouter>
+    {renderRoutes( routes )}
+  </BrowserRouter>
+);
 
-ReactDOM.render( <App />, document.getElementById( 'root' ));
+ReactDOM.render( root, document.getElementById( 'root' ));

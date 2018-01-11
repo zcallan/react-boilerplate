@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Home } from 'views';
+import { renderRoutes } from 'react-router-config';
 
 
 class App extends Component {
   render() {
+    const { route } = this.props;
+
     return (
       <div>
-        <Home />
+        {renderRoutes( route.routes )}
       </div>
     );
   }
